@@ -12,9 +12,9 @@
 package de.javawi.jstun.header;
 
 public class MessageHeaderException extends Exception {
-	private static final long serialVersionUID = 3689066248944103737L;
+    private static final long serialVersionUID = 3689066248944103737L;
 
-	public MessageHeaderException(String mesg) {
-		super(mesg);
-	}
+    public MessageHeaderException(String mesg) {
+        super(mesg);
+    }
 }

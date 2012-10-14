@@ -16,15 +16,16 @@ import org.slf4j.LoggerFactory;
 
 
 public class SourceAddress extends MappedResponseChangedSourceAddressReflectedFrom {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SourceAddress.class);
-	public SourceAddress() {
-		super(MessageAttribute.MessageAttributeType.SourceAddress);
-	}
-	
-	public static MessageAttribute parse(byte[] data) throws MessageAttributeParsingException {
-		SourceAddress sa = new SourceAddress();
-		MappedResponseChangedSourceAddressReflectedFrom.parse(sa, data);
-		LOGGER.debug("Message Attribute: Source Address parsed: " + sa.toString() + ".");
-		return sa;
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(SourceAddress.class);
+
+    public SourceAddress() {
+        super(MessageAttribute.MessageAttributeType.SourceAddress);
+    }
+
+    public static MessageAttribute parse(byte[] data) throws MessageAttributeParsingException {
+        SourceAddress sa = new SourceAddress();
+        MappedResponseChangedSourceAddressReflectedFrom.parse(sa, data);
+        LOGGER.debug("Message Attribute: Source Address parsed: " + sa.toString() + ".");
+        return sa;
+    }
 }
